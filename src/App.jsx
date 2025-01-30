@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 const App = () => (
   <div style={{ textAlign: "center" }}>
-    <Routes>
+    <Routes> 
       <Route path="/" element={<Home/>} />
     </Routes>
   </div>
