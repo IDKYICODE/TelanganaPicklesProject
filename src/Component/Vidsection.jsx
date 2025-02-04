@@ -1,7 +1,12 @@
 import React from 'react';
 import back from '../assets/back.png';
 import video from '../assets/video.png';
+import { useNavigate } from 'react-router-dom';
 const Vidsection = () => {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate("/pickleslist");
+  }
   return (
     <div className="relative w-full h-[700px]">
       
@@ -28,7 +33,7 @@ const Vidsection = () => {
                 Discover our handcrafted organic pickles made with locally sourced 
                 ingredients and traditional recipes.
               </p>
-              <button className="bg-lime-500 hover:bg-lime-600 text-white px-8 py-3 rounded-md font-semibold transition-colors">
+              <button onClick={handleClick} className="bg-lime-500 hover:bg-lime-600 text-white px-8 py-3 rounded-md font-semibold transition-colors">
                 SHOP NOW
               </button>
             </div>

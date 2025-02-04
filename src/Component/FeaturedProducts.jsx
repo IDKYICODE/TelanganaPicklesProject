@@ -96,7 +96,7 @@ const FeaturedProducts = () => {
       </div>
       
       <div className="flex justify-end mb-4">
-        <a href="#" className="text-red-800 hover:underline font-bold">Browse all pickles</a>
+        <a href="/pickleslist" className="text-red-800 hover:underline font-bold">Browse all pickles</a>
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

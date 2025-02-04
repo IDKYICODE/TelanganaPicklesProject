@@ -1,8 +1,15 @@
 import React from 'react';
 import pickle1 from '../assets/pickle1.png';
-
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate=useNavigate();
+  const handleRegister=()=>{
+    navigate("/register");
+  }
+  const handleLogin=()=>{
+    navigate("/login");
+  }
   return (
     <nav className="flex items-center justify-between px-3 py-3 bg-white">
       
@@ -16,9 +23,9 @@ const Navbar = () => {
 
       
       <div className="flex-1 flex items-center justify-start space-x-6 ml-15">
-        <a href="#" className="text-black font-medium">Home</a>
+        <a href="/" className="text-black font-medium">Home</a>
         <a href="#" className="text-gray-500">About Us</a>
-        <a href="#" className="text-gray-500">Products</a>
+        <a href="/pickleslist" className="text-gray-500">Products</a>
         <a href="#" className="text-gray-500">Contact Us</a>
       </div>
 
@@ -30,10 +37,10 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="flex items-center space-x-2">
-          <button className="px-4 py-1 text-gray-600 border border-gray-300 rounded-full">
+          <button onClick={handleLogin} className="px-4 py-1 text-gray-600 border border-gray-300 rounded-full hover:bg-gray-100">
             Login
           </button>
-          <button className="px-4 py-1 text-white bg-[#7B1816] rounded-full">
+          <button onClick={handleRegister} className="px-4 py-1 text-white bg-[#7B1816] rounded-full hover:bg-red-950">
             Sign Up
           </button>
         </div>

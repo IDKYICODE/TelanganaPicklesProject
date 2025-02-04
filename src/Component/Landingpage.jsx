@@ -1,8 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Landingpage = () => {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+    navigate("/pickleslist");
+  }
   return (
     <div>
       <Navbar />
@@ -13,7 +19,7 @@ const Landingpage = () => {
             <br />
             Homemade Pickles.
           </h1>
-          <button className="bg-[#7B1816] text-white px-6 py-3 rounded-full mt-4">
+          <button onClick={handleClick} className="bg-[#7B1816] hover:bg-red-950 text-white px-6 py-3 rounded-full mt-4">
             Browse all pickles
           </button>
         </div>
